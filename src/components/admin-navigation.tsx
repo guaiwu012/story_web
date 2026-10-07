@@ -4,9 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const adminSections = [
-  { href: "/admin/memberships", label: "阅读权限" },
-  { href: "/admin/submissions", label: "投稿审核" },
-  { href: "/admin/stories", label: "作品管理" },
+  { href: "/admin/stories", label: "文章管理" },
+  { href: "/admin/submissions", label: "推荐审核" },
 ];
 
 export function AdminModeSwitch() {
@@ -17,7 +16,7 @@ export function AdminModeSwitch() {
     <Link href="/" aria-current={!inAdmin ? "page" : undefined}>
       <span className="mode-label-long">阅读模式</span><span className="mode-label-short">阅读</span>
     </Link>
-    <Link href="/admin/memberships" aria-current={inAdmin ? "page" : undefined}>
+    <Link href="/admin/stories" aria-current={inAdmin ? "page" : undefined}>
       <span className="mode-label-long">管理后台</span><span className="mode-label-short">管理</span>
     </Link>
   </nav>;

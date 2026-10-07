@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "认领文章",
-  description: "联系平台管理员认领已发布的文章。",
+  description: "原作者联系站长，确认、修订或撤下已收录文章。",
 };
 
 export default function ClaimPage() {
   return <div className="container page claim-page">
     <section className="claim-card" aria-labelledby="claim-title">
-      <span className="eyebrow">作者服务</span>
+      <span className="eyebrow">原作者联系</span>
       <h1 id="claim-title">认领文章</h1>
-      <p>如果你是文章作者，请扫码添加管理员微信，并说明需要认领的文章。</p>
+      <p>如果你是文章作者，请扫码添加我的微信。你可以确认署名与出处、补充信息、提出修订，或要求撤下文章。</p>
       <div className="claim-qr">
         <Image
           src="/images/claim-wechat.jpg"
@@ -21,7 +21,7 @@ export default function ClaimPage() {
           priority
         />
       </div>
-      <small>手机访问时，可长按二维码识别。</small>
+      <small>添加时请备注文章标题。手机访问可长按二维码识别。</small>
     </section>
   </div>;
 }
